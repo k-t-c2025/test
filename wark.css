@@ -1,0 +1,77 @@
+/*ボーダーはアウトライとして設定
+    個別設定は別途*/
+table{
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 800px; /* 横幅を固定 */
+    /* 行高さのベース単位（必要に応じて調整）*/
+    --row-unit: 70px;
+}
+
+.juusyou{
+    font-size: 20px;
+}
+
+.top{
+    font-size: 30px;
+    text-align: left;
+    text-decoration: underline;
+    text-decoration-thickness: 8px;
+    text-decoration-color: blue;
+    margin-bottom: 20px;
+    margin-left: 30px;     /* デフォルトでOK。必要に応じて微調整 */
+    /*padding-left: 10px;    /* 必要なら */
+    
+}
+/*display: flex;により、ひとつのアイテム化、
+    justify-content: center;により。センタリング*/
+.hyou{
+    display: flex;
+    justify-content: center;
+
+}
+
+/* 連続する表ブロックの間だけ上部に余白を追加 */
+.hyou + .hyou{
+    margin-top: 40px;
+}
+
+/*widthにより横幅を指定する
+    a1属性にかかわる下方向全てに、干渉する*/
+.a1{
+    /*border-right: none;*/
+    font-size: 40px;
+    height: 55px;
+    background-color: chartreuse;
+}
+
+/* 2列を均等に */
+th, td{
+    width: 50%;
+}
+
+.a2{
+    font-size: 20px;
+    height: calc(var(--row-unit) * 2); /* 3 */
+    text-align: left; /* 左寄せ */
+
+}
+
+.c2{
+    font-size: 20px;
+    font-family: 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'Yu Mincho', '游明朝', 'YuMincho', 'MS Mincho', 'HGS明朝E', serif;
+    font-weight: 500;
+    font-synthesis: weight;
+    background-color: pink;
+    height: calc(var(--row-unit) * 2); /* 1 */
+    text-align: left; /* 左寄せ */
+}
+
+.a3{
+    color: white;
+    font-size: 20px;
+    font-family: 'HG丸ｺﾞｼｯｸM-PRO';
+    background-color: rgb(0, 30, 255);
+    height: calc(var(--row-unit) * 1); /* 3 */
+}
+
