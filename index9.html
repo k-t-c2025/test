@@ -2,8 +2,63 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>スマホ版 ダート</title>
+    <link rel="stylesheet" href="wark7.css">
+</head>
+<body>
+    <header class="top-switch">
+        <a href="index7.html" class="smart-link">ホームへ</a>
+    </header>
+
+    <main class="mobile-page">
+        <h1 class="page-title">ダートコース（スマホ）</h1>
+
+        <section id="sapporo1" class="course">
+            <h2 class="course-title sapporo">札幌（ダート）</h2>
+            <ul class="course-links">
+                <li><a href="#sapporoD1200">1200m</a></li>
+            </ul>
+        </section>
+
+        <section id="nakayama1" class="course">
+            <h2 class="course-title nakayama">中山（ダート）</h2>
+            <ul class="course-links">
+                <li><a href="#nakayamaD1200">1200m</a></li>
+                <li><a href="#nakayamaD1800">1800m</a></li>
+                <li><a href="#nakayamaD2400">2400m</a></li>
+                <li><a href="#nakayamaD2500">2500m</a></li>
+            </ul>
+        </section>
+
+        <section id="hansin1" class="course">
+            <h2 class="course-title hansin">阪神（ダート）</h2>
+            <ul class="course-links">
+                <li><a href="#hansinD1200">1200m</a></li>
+                <li><a href="#hansinD1400">1400m</a></li>
+                <li><a href="#hansinD1800">1800m</a></li>
+                <li><a href="#hansinD2000">2000m</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="index7.html" class="nav-item nav-home" data-page="home">ホーム</a>
+        <a href="index8.html" class="nav-item nav-turf" data-page="turf">芝</a>
+        <a href="index9.html" class="nav-item nav-dirt" data-page="dirt">ダート</a>
+    </nav>
+
+    <script src="wark.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="wark.css">
+    <link rel="stylesheet" href="wark7.css">
     <style media="screen">
         th,th{
         border: 5px #000000 solid;
@@ -171,11 +226,11 @@
 </div>
 
 <nav class="bottom-nav">
-    <a href="index.html" class="nav-item nav-home" data-page="home">ホーム</a>
-    <a href="#sapporo1" class="nav-item nav-sapporo">札幌</a>
-    <a href="#nakayama1" class="nav-item nav-nakayama">中山</a>
-    <a href="#hansin1" class="nav-item nav-hansin">阪神</a>
-    <a href="index1.html" class="nav-item nav-turf" data-page="turf">芝</a>
+    <a href="index7.html" class="nav-item nav-home" data-page="home">ホーム</a>
+    <a href="index9.html#sapporo1" class="nav-item nav-sapporo">札幌</a>
+    <a href="index9.html#nakayama1" class="nav-item nav-nakayama">中山</a>
+    <a href="index9.html#hansin1" class="nav-item nav-hansin">阪神</a>
+    <a href="index8.html" class="nav-item nav-turf" data-page="turf">芝</a>
 </nav>
 
 <script src="wark.js"></script>
