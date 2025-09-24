@@ -86,7 +86,7 @@ caption{
 table{
     border-collapse: collapse;
     table-layout: fixed;
-    width: 800px; /* 横幅を固定（デスクトップ） */
+    width: 800px; /* 横幅を固定 */
     /* 行高さのベース単位（必要に応じて調整）*/
     --row-unit: 70px;
 
@@ -334,48 +334,50 @@ body{
 /* active は個別色を維持（色変更しない）*/
 .bottom-nav .nav-item.active{ color: inherit; }
 
-/* ========================
-   モバイル最適化 (～ 768px)
-   ======================== */
-@media (max-width: 768px){
-    /* 背景のパフォーマンス最適化 */
+
+/* スマホ最適化 */
+@media (max-width: 600px){
+    /* 背景を端末幅に合わせ、モバイルでの fixed バグを回避 */
     body{
         background-attachment: scroll;
-        padding-bottom: calc(70px + env(safe-area-inset-bottom));
+        background-size: cover;
+        background-position: center top;
     }
 
-    /* テーブルは画面幅に追従 */
-    .hyou{ padding: 0 12px; }
-    table{ width: 100%; }
-    th, td{ width: auto; }
+    /* 画面幅に合わせてテーブルを縮める */
+    table{
+        width: 100%;
+    }
 
-    /* 見出しやラベルの文字サイズ縮小と余白調整 */
-    .koutsuku{ font-size: 24px; padding: 6px 24px; margin-left: 0; }
-    .sapporoTop, .nakayamaTop, .hansinTop{ font-size: 16px; }
+    /* BR 以外で折り返さない（溢れは横スクロール）*/
+    th, td{
+        white-space: nowrap;
+    }
     .sapporoTurf a,
     .sapporoDirt a,
     .nakayamaTurf a,
     .nakayamaDirt a,
     .hansinTurf a,
-    .hansinDirt a{ font-size: 16px; padding-left: 8px; }
-
-    /* セル内リンクボックスのパディングを縮小 */
-    .bb1 a, .cc1 a{ padding: 10px 12px; }
-
-    /* ボトムナビをやや低めに、タップしやすく */
-    .bottom-nav{
-        height: 56px;
-        padding-bottom: env(safe-area-inset-bottom);
+    .hansinDirt a{
+        white-space: nowrap;
     }
+
+    /* 文字サイズを全体的に小さく */
+    .koutsuku{ font-size: 22px; padding: 6px 24px; margin-left: 0; }
+    .sapporoTop, .nakayamaTop, .hansinTop{ font-size: 16px; }
+    .a1{ font-size: 26px; height: 48px; }
+    .a2, .a3,
+    .sapporoTurf a,
+    .sapporoDirt a,
+    .nakayamaTurf a,
+    .nakayamaDirt a,
+    .hansinTurf a,
+    .hansinDirt a{ font-size: 14px; }
+
+    /* ボトムナビも少し圧縮 */
+    .bottom-nav{ height: 56px; }
     .bottom-nav .nav-item{ padding: 8px 0; font-size: 14px; }
-}
 
-/* ========================
-   コンパクト端末 (～ 360px)
-   ======================== */
-@media (max-width: 250px){
-    .koutsuku{ font-size: 20px; padding: 4px 16px; }
-    .bottom-nav{ height: 52px; }
-    body{ padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+    /* 横スクロール許可（どうしても収まらない場合の逃げ）*/
+    html, body{ overflow-x: auto; }
 }
-
