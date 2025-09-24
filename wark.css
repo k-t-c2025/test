@@ -354,3 +354,7 @@ body{
 /* active は個別色を維持（色変更しない）*/
 .bottom-nav .nav-item.active{ color: inherit; }
 
+.version{
+    display: inline-block;
+    margin-left: 24px; /* 必要に応じて数値を調整 */
+}
