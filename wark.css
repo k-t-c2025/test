@@ -335,49 +335,101 @@ body{
 .bottom-nav .nav-item.active{ color: inherit; }
 
 
-/* スマホ最適化 */
+/* 画面はみ出し防止の基本設定 */
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* スマホ向けレスポンシブ調整 */
 @media (max-width: 600px){
-    /* 背景を端末幅に合わせ、モバイルでの fixed バグを回避 */
+    /* 背景はモバイルでは固定を解除（描画の乱れ防止） */
     body{
+        padding-bottom: 72px;
         background-attachment: scroll;
-        background-size: cover;
-        background-position: center top;
     }
 
-    /* 画面幅に合わせてテーブルを縮める */
+    /* レイアウトの横幅調整 */
+    .hyou{
+        padding-left: 8px;
+        padding-right: 8px;
+    }
     table{
         width: 100%;
+        max-width: none;
     }
 
-    /* BR 以外で折り返さない（溢れは横スクロール）*/
-    th, td{
-        white-space: nowrap;
+    /* タイトル・見出し類を小さくして折り返し可に */
+    caption,
+    .koutsuku{
+        font-size: 22px;
+        padding: 6px 12px;
+        white-space: normal;
+        margin: 12px auto;
+        display: block;
     }
+    .sapporoTop,
+    .nakayamaTop,
+    .hansinTop{
+        font-size: 16px;
+    }
+
+    /* 各キャプションIDの横ずれを解消して中央寄せ */
+    #sapporo,
+    #sapporo1,
+    #nakayama,
+    #nakayama1,
+    #hansin,
+    #hansin1{
+        font-size: 28px;
+        margin-left: 0;
+        white-space: normal;
+        text-align: center;
+        padding: 6px 8px;
+        display: block;
+    }
+
+    /* セルの大きい見出しを縮小 */
+    .da-to,
+    .a1{
+        font-size: 22px;
+        height: auto;
+        line-height: 1.3;
+        white-space: normal;
+        padding: 8px 10px;
+    }
+
+    /* 本文系を読みやすく縮小＆折り返し */
+    .a2,
+    .a3,
     .sapporoTurf a,
     .sapporoDirt a,
     .nakayamaTurf a,
     .nakayamaDirt a,
     .hansinTurf a,
     .hansinDirt a{
-        white-space: nowrap;
+        font-size: 16px;
+        line-height: 1.6;
+        white-space: normal;
+    }
+    .a3{
+        height: auto;
+        padding: 8px 10px;
     }
 
-    /* 文字サイズを全体的に小さく */
-    .koutsuku{ font-size: 22px; padding: 6px 24px; margin-left: 0; }
-    .sapporoTop, .nakayamaTop, .hansinTop{ font-size: 16px; }
-    .a1{ font-size: 26px; height: 48px; }
-    .a2, .a3,
-    .sapporoTurf a,
-    .sapporoDirt a,
-    .nakayamaTurf a,
-    .nakayamaDirt a,
-    .hansinTurf a,
-    .hansinDirt a{ font-size: 14px; }
+    /* テーブル列幅は維持しつつ余白を最適化 */
+    th, td{
+        width: 50%;
+        padding: 6px 8px;
+        word-break: break-word;
+    }
 
-    /* ボトムナビも少し圧縮 */
-    .bottom-nav{ height: 56px; }
-    .bottom-nav .nav-item{ padding: 8px 0; font-size: 14px; }
-
-    /* 横スクロール許可（どうしても収まらない場合の逃げ）*/
-    html, body{ overflow-x: auto; }
+    /* ナビを少しコンパクトに */
+    .bottom-nav{
+        height: 56px;
+    }
+    .bottom-nav .nav-item{
+        padding: 8px 0;
+        font-size: 12px;
+    }
 }
