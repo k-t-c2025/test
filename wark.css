@@ -373,7 +373,7 @@ body{
 /* ========================
    コンパクト端末 (～ 360px)
    ======================== */
-@media (max-width: 360px){
+@media (max-width: 250px){
     .koutsuku{ font-size: 20px; padding: 4px 16px; }
     .bottom-nav{ height: 52px; }
     body{ padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
