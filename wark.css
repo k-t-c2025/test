@@ -119,13 +119,7 @@ table{
 .top{
     font-size: 30px;
     text-align: left;
-    text-decoration: underline;
-    text-decoration-thickness: 8px;
-    text-decoration-color: blue;
     margin-bottom: 20px;
-    margin-left: 30px;     /* デフォルトでOK。必要に応じて微調整 */
-    /*padding-left: 10px;    /* 必要なら */
-    
 }
 /*display: flex;により、ひとつのアイテム化、
     justify-content: center;により。センタリング*/
@@ -310,13 +304,26 @@ th{
     left: 0;
     right: 0;
     bottom: 0;
-    height: 60px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    gap: 12px;/*上段下段の広さ*/
     background: #ffffff;
     border-top: 2px solid #000000;
     z-index: 1000;
+    padding: 6px 40px; /* 左右の余白 */
+}
+.bottom-nav-row{
+    display: flex;
+    gap: 40px; /* アイテム間余白（芝とダートの間） */
+}
+.bottom-nav-row.top{
+    justify-content: center;
+}
+.bottom-nav-row.nav-row-top{
+    justify-content: center;
+}
+.bottom-nav-row.bottom{
+    justify-content: space-around;
 }
 .bottom-nav .nav-item{
     flex: 1;
@@ -325,6 +332,7 @@ th{
     color: #333;
     font-weight: bold;
     padding: 10px 0;
+    border-radius: 8px;
 }
 .bottom-nav .nav-item.active{
     color: #1976d2;
