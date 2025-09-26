@@ -1,4 +1,8 @@
-alert("v1.6を公開<br>疲れました")
+// index.html のときのみアラート表示
+if ((location.pathname.split('/').pop() || 'index.html') === 'index.html') {
+    alert("v1.6を公開\n疲れました");
+}
+
 
 
 
