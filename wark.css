@@ -45,46 +45,115 @@ caption{
 #sapporo{
     background-color: #000000;
     color: #ffffff;
-    margin-left: 200px;
+    width: 52.5vw;
+    margin-left: calc(50% - 25vw + var(--sapporo-offset, 180px)); /* 中央基準に右シフト可 */
+    text-align: left; /* 文字を左寄せ */
+    display: flex; /* タイトルとボタンを左右に配置 */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+    padding: 6px 8px;
+}
+/* 見出しテキスト */
+.section-title{
+    font-weight: bold;
+    font-size: 32px;
     white-space: nowrap;
+    margin-left: 12px; /* 見出しだけを少し右に寄せる */
+}
+/* 右側の距離ボタン群（2段レイアウト・右寄せ） */
+.distance-buttons{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-auto-rows: 1fr;
+    gap: 6px 8px;
+    margin-left: auto; /* 右側へ寄せる */
+}
+.distance-buttons .distance-btn{
     display: inline-block;
-    padding: 6px 150px;
-    border: 3px solid #333333;
-    border-radius: 12px;
+    padding: 4px 10px;
+    background: #1976d2;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 9999px;
+    font-size: 14px;
+    line-height: 1;
+}
+.distance-buttons .distance-btn:hover{
+    opacity: 0.9;
 }
 
 #sapporo1{
     background-color: #000000;
     color: #ffffff;
-    margin-left: 150px;
-    white-space: nowrap;
-    display: inline-block;
-    padding: 6px 150px;
-    border: 3px solid #333333;
-    border-radius: 12px;
+    width: 52.5vw;
+    margin-left: calc(50% - 25vw + var(--sapporo-offset, 180px)); /* 中央基準に右シフト可 */
+    text-align: left; /* 文字を左寄せ */
+    display: flex; /* タイトルとボタンを左右に配置 */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+    padding: 6px 8px;
 }
 
 #nakayama{
     background-color: #000000;
     color: #ffffff;
-    margin-left: 200px;
-    white-space: nowrap;
-    display: inline-block;
-    padding: 6px 100px;
-    border: 3px solid #333333;
-    border-radius: 12px;
+    width: 52.5vw;
+    margin-left: calc(50% - 25vw + var(--nakayama-offset, 180px)); /* 中央基準に右シフト可 */
+    text-align: left; /* 文字を左寄せ */
+    display: flex; /* タイトルとボタンを左右に配置 */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+    padding: 6px 8px;
+}
+
+#nakayama1{
+    background-color: #000000;
+    color: #ffffff;
+    width: 52.5vw;
+    margin-left: calc(50% - 25vw + var(--nakayama-offset, 180px)); /* 中央基準に右シフト可 */
+    text-align: left; /* 文字を左寄せ */
+    display: flex; /* タイトルとボタンを左右に配置 */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+    padding: 6px 8px;
 }
 
 #hansin{
     background-color: #000000;
     color: #ffffff;
-    margin-left: 200px;
-    white-space: nowrap;
-    display: inline-block;
-    padding: 6px 100px;
-    border: 3px solid #333333;
-    border-radius: 12px;
+    width: 52.5vw;
+    margin-left: calc(50% - 25vw + var(--hansin-offset, 180px)); /* 中央基準に右シフト可 */
+    text-align: left; /* 文字を左寄せ */
+    display: flex; /* タイトルとボタンを左右に配置 */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+    padding: 6px 8px;
 }
+
+#hansin1{
+    background-color: #000000;
+    color: #ffffff;
+    width: 52.5vw;
+    margin-left: calc(50% - 25vw + var(--hansin-offset, 180px)); /* 中央基準に右シフト可 */
+    text-align: left; /* 文字を左寄せ */
+    display: flex; /* タイトルとボタンを左右に配置 */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+    padding: 6px 8px;
+}
+
 .sapporoTop{
     font-size: 20px;
     background-color: rgba(0, 121, 107, 0.8);
@@ -340,7 +409,7 @@ th{
 
 /* ボトムナビの被りを避ける余白 */
 body{
-    padding-bottom: 80px;
+    padding-bottom: 100px;
     scroll-behavior: smooth;
     /* 固定背景（スクロールしても動かない） */
     background-image: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('background.jpg');
@@ -365,4 +434,13 @@ body{
 .version{
     display: inline-block;
     margin-left: 24px; /* 必要に応じて数値を調整 */
+    font-size: 20px; /* 少し大きく */
+    font-weight: 600;
+    color: #1976d2;
+    transition: color 0.2s ease, transform 0.15s ease;
+}
+.version:hover{
+    color: #0d47a1;
+    text-decoration: underline;
+    transform: scale(1.05);
 }

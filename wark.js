@@ -1,3 +1,8 @@
+alert("v1.6を公開")
+
+
+
+
 const navItems = document.querySelectorAll('.bottom-nav .nav-item');
 const currentPath = location.pathname.split('/').pop() || 'index.html';
 navItems.forEach(function(link){
