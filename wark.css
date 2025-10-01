@@ -1,25 +1,15 @@
-
-/* 競馬場項目の服飾*/
-caption{
-    display: block;
-    padding: 8px 16px;
-    border: 3px solid #333333;
-    border-radius: 12px;
-    margin: auto 0;
-    text-align: center;
-}
-
 .koutsuku{
     background-color: #000000;
     color: #ffffff;
     font-size: 40px;
-    margin-left: 50px;
-    margin-top: 30px;
+    margin: 30px auto;
     white-space: nowrap;
-    display: inline-block;
+    display: block;
+    text-align: center;
     padding: 6px 150px;
     border: 3px solid #333333;
     border-radius: 12px;
+    width: fit-content;
 }
 
 /* ヘッダー内のスマホ版リンク */
@@ -65,10 +55,30 @@ caption{
 /* 右側の距離ボタン群（2段レイアウト・右寄せ） */
 .distance-buttons{
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(2, 1fr);
     gap: 6px 8px;
     margin-left: auto; /* 右側へ寄せる */
+}
+
+/* デフォルト設定：最初の4個を1行目、5個目以降を2行目 */
+.distance-buttons .distance-btn:nth-child(-n+4) {
+    grid-row: 1;
+}
+
+.distance-buttons .distance-btn:nth-child(n+5) {
+    grid-row: 2;
+}
+
+/* 中山と東京の特別設定：最初の3個を1行目、4個目以降を2行目 */
+#nakayama .distance-buttons .distance-btn:nth-child(-n+3),
+#tokyo .distance-buttons .distance-btn:nth-child(-n+3) {
+    grid-row: 1;
+}
+
+#nakayama .distance-buttons .distance-btn:nth-child(n+4),
+#tokyo .distance-buttons .distance-btn:nth-child(n+4) {
+    grid-row: 2;
 }
 .distance-buttons .distance-btn{
     display: inline-block;
@@ -89,6 +99,34 @@ caption{
     color: #ffffff;
     width: 52.5vw;
     margin-left: calc(50% - 25vw + var(--sapporo-offset, 180px)); /* 中央基準に右シフト可 */
+    text-align: left; /* 文字を左寄せ */
+    display: flex; /* タイトルとボタンを左右に配置 */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+    padding: 6px 8px;
+}
+
+#tokyo{
+    background-color: #000000;
+    color: #ffffff;
+    width: 52.5vw;
+    margin-left: calc(50% - 25vw + var(--nakayama-offset, 180px)); /* 中央基準に右シフト可 */
+    text-align: left; /* 文字を左寄せ */
+    display: flex; /* タイトルとボタンを左右に配置 */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+    padding: 6px 8px;
+}
+
+#tokyo1{
+    background-color: #000000;
+    color: #ffffff;
+    width: 52.5vw;
+    margin-left: calc(50% - 25vw + var(--nakayama-offset, 180px)); /* 中央基準に右シフト可 */
     text-align: left; /* 文字を左寄せ */
     display: flex; /* タイトルとボタンを左右に配置 */
     align-items: center;
@@ -159,6 +197,11 @@ caption{
     background-color: rgba(0, 121, 107, 0.8);
 }
 
+.tokyoTop{
+    font-size: 20px;
+    background-color: rgba(217, 199, 7, 0.8); 
+}
+
 .nakayamaTop{
     font-size: 20px;
     background-color: rgba(142, 36, 170, 0.8); 
@@ -195,17 +238,8 @@ table{
 .hyou{
     display: flex;
     justify-content: center;
-
-}
-
-/* 連続する表ブロックの間だけ上部に余白を追加 */
-.hyou + .hyou{
-    margin-top: 40px;
-}
-
-/* 中山（.nakayamaTop を含む .hyou）のみ上の余白を拡大 */
-.hyou:has(.nakayamaTop){
-    margin-top: 80px;
+    margin: 20px 0;
+    gap: 20px;
 }
 
 .da-to{
@@ -257,6 +291,28 @@ th{
     line-height: 1.8;
     padding-top: 6px;
     padding-bottom: 6px;
+}
+
+.tokyoTurf a{
+    font-size: 20px;
+    text-align: left; /* 左寄せ */
+    padding-left: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    line-height: 2.0;
+}
+
+.tokyoDirt a{
+    font-size: 20px;
+    text-align: left; /* 左寄せ */
+    padding-left: 20px;
+    margin-right: 10px;
+    line-height: 2.2;
+    padding-top: 6px;
+    padding-bottom: 6px;
+
 }
 
 .nakayamaTurf a{
@@ -311,27 +367,8 @@ th{
 }
 
 
-#sapporo{
-    font-size: 40px;
-
-}
-#sapporo1{
-    font-size: 40px;
-
-}
-#nakayama{
-    font-size: 40px;
-
-}
-#nakayama1{
-    font-size: 40px;
-}
-
-#hansin{
-    font-size: 40px;
-
-}
-#hansin1{
+/* 競馬場セクション共通フォントサイズ */
+#sapporo, #sapporo1, #tokyo, #tokyo1,#nakayama, #nakayama1, #hansin, #hansin1 {
     font-size: 40px;
 }
 
@@ -425,6 +462,7 @@ body{
 .bottom-nav .nav-dirt{ background-color: #6d4c41; 
                         color: white;}
 .bottom-nav .nav-sapporo{ background-color: #00796b; }
+.bottom-nav .nav-tokyo{ background-color: #ffd700; }
 .bottom-nav .nav-nakayama{ background-color: #8e24aa; }
 .bottom-nav .nav-hansin{ background-color: #d4d4d4; }
 
