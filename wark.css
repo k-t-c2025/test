@@ -80,6 +80,30 @@
 #tokyo .distance-buttons .distance-btn:nth-child(n+4) {
     grid-row: 2;
 }
+
+/* 東京と阪神のダート特別設定：最初の3個を1行目、4個目以降を2行目 */
+#tokyo1 .distance-buttons .distance-btn:nth-child(-n+3),
+#hansin1 .distance-buttons .distance-btn:nth-child(-n+3) {
+    grid-row: 1;
+}
+
+#tokyo1 .distance-buttons .distance-btn:nth-child(n+4),
+#hansin1 .distance-buttons .distance-btn:nth-child(n+4) {
+    grid-row: 2;
+}
+
+/* 中山のダート特別設定：最初の2個を1行目、3個目以降を2行目 */
+#sapporo1 .distance-buttons .distance-btn:nth-child(-n+2),
+#nakayama1 .distance-buttons .distance-btn:nth-child(-n+2) {
+    grid-row: 1;
+}
+
+#sapporo1 .distance-buttons .distance-btn:nth-child(n+3),
+#nakayama1 .distance-buttons .distance-btn:nth-child(n+3) {
+    grid-row: 2;
+}
+
+
 .distance-buttons .distance-btn{
     display: inline-block;
     padding: 4px 10px;
