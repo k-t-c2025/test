@@ -32,19 +32,7 @@
     opacity: 0.9;
 }
 
-#sapporo{
-    background-color: #000000;
-    color: #ffffff;
-    width: 52.5vw;
-    margin-left: calc(50% - 25vw + var(--sapporo-offset, 180px)); /* 中央基準に右シフト可 */
-    text-align: left; /* 文字を左寄せ */
-    display: flex; /* タイトルとボタンを左右に配置 */
-    align-items: center;
-    justify-content: flex-start;
-    gap: 12px;
-    box-sizing: border-box;
-    padding: 6px 8px;
-}
+
 /* 見出しテキスト */
 .section-title{
     font-weight: bold;
@@ -118,6 +106,20 @@
     opacity: 0.9;
 }
 
+#sapporo{
+    background-color: #000000;
+    color: #ffffff;
+    width: 52.5vw;
+    margin-left: calc(50% - 25vw + var(--sapporo-offset, 180px)); /* 中央基準に右シフト可 */
+    text-align: left; /* 文字を左寄せ */
+    display: flex; /* タイトルとボタンを左右に配置 */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+    padding: 6px 8px;
+}
+
 #sapporo1{
     background-color: #000000;
     color: #ffffff;
@@ -188,6 +190,34 @@
     padding: 6px 8px;
 }
 
+#kyoto{
+    background-color: #000000;
+    color: #ffffff;
+    width: 52.5vw;
+    margin-left: calc(50% - 25vw + var(--hansin-offset, 180px)); /* 中央基準に右シフト可 */
+    text-align: left; /* 文字を左寄せ */
+    display: flex; /* タイトルとボタンを左右に配置 */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+    padding: 6px 8px;
+}
+
+#kyoto1{
+    background-color: #000000;
+    color: #ffffff;
+    width: 52.5vw;
+    margin-left: calc(50% - 25vw + var(--hansin-offset, 180px)); /* 中央基準に右シフト可 */
+    text-align: left; /* 文字を左寄せ */
+    display: flex; /* タイトルとボタンを左右に配置 */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+    padding: 6px 8px;
+}
+
 #hansin{
     background-color: #000000;
     color: #ffffff;
@@ -229,6 +259,11 @@
 .nakayamaTop{
     font-size: 20px;
     background-color: rgba(142, 36, 170, 0.8); 
+}
+
+.kyotoTop{
+    font-size: 20px;
+    background-color: rgba(36, 170, 63, 0.8);    
 }
 
 .hansinTop{
@@ -361,6 +396,28 @@ th{
 
 }
 
+.kyotoTurf a{
+    font-size: 20px;
+    text-align: left; /* 左寄せ */
+    padding-left: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    line-height: 2.0;
+}
+
+.kyotoDirt a{
+    font-size: 20px;
+    text-align: left; /* 左寄せ */
+    padding-left: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    line-height: 1.8;
+}
+
 .hansinTurf a{
     font-size: 20px;
     text-align: left; /* 左寄せ */
@@ -488,6 +545,7 @@ body{
 .bottom-nav .nav-sapporo{ background-color: #00796b; }
 .bottom-nav .nav-tokyo{ background-color: #ffd700; }
 .bottom-nav .nav-nakayama{ background-color: #8e24aa; }
+.bottom-nav .nav-kyoto{ background-color: rgba(36, 170, 63, 0.8); }  
 .bottom-nav .nav-hansin{ background-color: #d4d4d4; }
 
 /* active は個別色を維持（色変更しない）*/
