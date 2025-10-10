@@ -1,8 +1,7 @@
 // index.html のときのみアラート表示
 if ((location.pathname.split('/').pop() || 'index.html') === 'index.html') {
-    alert("京都は、八ッ橋、生八ッ橋でしょ");
+    alert("東京6R ブロンザナイト 11R アスクエジンバラ");
 }
-
 
 
 
