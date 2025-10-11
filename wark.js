@@ -1,6 +1,6 @@
 // index.html のときのみアラート表示
 if ((location.pathname.split('/').pop() || 'index.html') === 'index.html') {
-    alert("東京6R ブロンザナイト 11R アスクエジンバラ");
+    alert("東京\n3R チャリングクロス\n4R スーホ\n5R イクイノックスの妹、イクシード\n11R ボンドガール");
 }
 
 
