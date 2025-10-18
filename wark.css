@@ -49,49 +49,52 @@
     margin-left: auto; /* 右側へ寄せる */
 }
 
+/* ボタン配列設定 - 競馬場別 */
+
 /* デフォルト設定：最初の4個を1行目、5個目以降を2行目 */
 .distance-buttons .distance-btn:nth-child(-n+4) {
     grid-row: 1;
 }
-
 .distance-buttons .distance-btn:nth-child(n+5) {
     grid-row: 2;
 }
 
-/* 中山と東京の特別設定：最初の3個を1行目、4個目以降を2行目 */
+/* 3-4配列：中山、東京、函館、東京ダート、阪神ダート */
 #nakayama .distance-buttons .distance-btn:nth-child(-n+3),
-#tokyo .distance-buttons .distance-btn:nth-child(-n+3) {
-    grid-row: 1;
-}
-
-#nakayama .distance-buttons .distance-btn:nth-child(n+4),
-#tokyo .distance-buttons .distance-btn:nth-child(n+4) {
-    grid-row: 2;
-}
-
-/* 東京と阪神のダート特別設定：最初の3個を1行目、4個目以降を2行目 */
+#tokyo .distance-buttons .distance-btn:nth-child(-n+3),
+#hakodate .distance-buttons .distance-btn:nth-child(-n+3),
 #tokyo1 .distance-buttons .distance-btn:nth-child(-n+3),
 #hansin1 .distance-buttons .distance-btn:nth-child(-n+3) {
     grid-row: 1;
 }
 
+#nakayama .distance-buttons .distance-btn:nth-child(n+4),
+#tokyo .distance-buttons .distance-btn:nth-child(n+4),
+#hakodate .distance-buttons .distance-btn:nth-child(n+4),
 #tokyo1 .distance-buttons .distance-btn:nth-child(n+4),
 #hansin1 .distance-buttons .distance-btn:nth-child(n+4) {
     grid-row: 2;
 }
 
-/* 中山のダート特別設定：最初の2個を1行目、3個目以降を2行目 */
+/* 5-6配列：新潟 */
+#niigata .distance-buttons .distance-btn:nth-child(-n+5) {
+    grid-row: 1;
+}
+#niigata .distance-buttons .distance-btn:nth-child(n+6) {
+    grid-row: 2;
+}
+
+/* 2-3配列：札幌ダート、中山ダート */
 #sapporo1 .distance-buttons .distance-btn:nth-child(-n+2),
 #nakayama1 .distance-buttons .distance-btn:nth-child(-n+2) {
     grid-row: 1;
 }
-
 #sapporo1 .distance-buttons .distance-btn:nth-child(n+3),
 #nakayama1 .distance-buttons .distance-btn:nth-child(n+3) {
     grid-row: 2;
 }
 
-/* kyoto1の設定：全てのボタンを2行目に配置 */
+/* 全ボタン2行目：京都 */
 #kyoto1 .distance-buttons .distance-btn {
     grid-row: 2;
 }
@@ -117,13 +120,15 @@
     background-color: rgba(0, 121, 107, 0.8);
 }
 
-#sapporo{
+/* 札幌 */
+#sapporo,
+#sapporo1 {
     background-color: #000000;
     color: #ffffff;
     width: 52.5vw;
-    margin-left: calc(50% - 25vw + var(--sapporo-offset, 180px)); /* 中央基準に右シフト可 */
-    text-align: left; /* 文字を左寄せ */
-    display: flex; /* タイトルとボタンを左右に配置 */
+    margin-left: calc(50% - 25vw + var(--sapporo-offset, 180px));
+    text-align: left;
+    display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 12px;
@@ -131,36 +136,23 @@
     padding: 6px 8px;
 }
 
-#sapporo1{
-    background-color: #000000;
-    color: #ffffff;
-    width: 52.5vw;
-    margin-left: calc(50% - 25vw + var(--sapporo-offset, 180px)); /* 中央基準に右シフト可 */
-    text-align: left; /* 文字を左寄せ */
-    display: flex; /* タイトルとボタンを左右に配置 */
-    align-items: center;
-    justify-content: flex-start;
-    gap: 12px;
-    box-sizing: border-box;
-    padding: 6px 8px;
-}
-
-.sapporoTurf a{
+/* 札幌リンクスタイル */
+.sapporoTurf a,
+.sapporoDirt a {
     font-size: 20px;
-    text-align: left; /* 左寄せ */
+    text-align: left;
     padding-left: 5px;
     margin-right: 10px;
+}
+
+.sapporoTurf a {
     display: inline-block;
     padding-top: 10px;
     padding-bottom: 20px;
     line-height: 1.8;
 }
 
-.sapporoDirt a{
-    font-size: 20px;
-    text-align: left; /* 左寄せ */
-    padding-left: 5px;
-    margin-right: 10px;
+.sapporoDirt a {
     line-height: 2.2;
     padding-top: 6px;
     padding-bottom: 6px;
@@ -172,13 +164,15 @@
     background-color: rgba(250, 151, 247, 0.8);
 }
 
-#hakodate{
+/* 函館 */
+#hakodate,
+#hakodate1 {
     background-color: #000000;
     color: #ffffff;
     width: 52.5vw;
-    margin-left: calc(50% - 25vw + var(--sapporo-offset, 180px)); /* 中央基準に右シフト可 */
-    text-align: left; /* 文字を左寄せ */
-    display: flex; /* タイトルとボタンを左右に配置 */
+    margin-left: calc(50% - 25vw + var(--hakodate-offset, 180px));
+    text-align: left;
+    display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 12px;
@@ -186,47 +180,91 @@
     padding: 6px 8px;
 }
 
-#hakodate1{
-    background-color: #000000;
-    color: #ffffff;
-    width: 52.5vw;
-    margin-left: calc(50% - 25vw + var(--sapporo-offset, 180px)); /* 中央基準に右シフト可 */
-    text-align: left; /* 文字を左寄せ */
-    display: flex; /* タイトルとボタンを左右に配置 */
-    align-items: center;
-    justify-content: flex-start;
-    gap: 12px;
-    box-sizing: border-box;
-    padding: 6px 8px;
-}
-
-.hakodateTurf a{
+/* 函館リンクスタイル */
+.hakodateTurf a,
+.hakodateDirt a {
     font-size: 20px;
-    text-align: left; /* 左寄せ */
+    text-align: left;
     padding-left: 5px;
     margin-right: 10px;
+}
+
+.hakodateTurf a {
     display: inline-block;
     padding-top: 10px;
     padding-bottom: 20px;
     line-height: 1.8;
 }
 
-.hakodateDirt a{
-    font-size: 20px;
-    text-align: left; /* 左寄せ */
-    padding-left: 5px;
-    margin-right: 10px;
+.hakodateDirt a {
     line-height: 2.2;
     padding-top: 6px;
     padding-bottom: 6px;
 }
 
+/*新潟*/
+.niigataTop{
+    font-size: 20px;
+    background-color: rgba(250, 151, 247, 0.8);
+}
 
+/* 新潟 */
+#niigata {
+    background-color: #000000;
+    color: #ffffff;
+    width: 52.5vw;
+    margin-left: calc(50% - 25vw + var(--niigata-offset, 180px));
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+    padding: 6px 8px;
+}
+
+#niigata1 {
+    background-color: #000000;
+    color: #ffffff;
+    width: 52.5vw;
+    margin-left: calc(50% - 25vw + var(--niigata-offset, 180px));
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+    padding: 6px 8px;
+}
+
+/* 新潟リンクスタイル */
+.niigataTurf a,
+.niigataDirt a {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 5px;
+    margin-right: 10px;
+}
+
+.niigataTurf a {
+    display: inline-block;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    line-height: 1.8;
+}
+
+.niigataDirt a {
+    line-height: 2.2;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+/*東京*/
 #tokyo{
     background-color: #000000;
     color: #ffffff;
     width: 52.5vw;
-    margin-left: calc(50% - 25vw + var(--nakayama-offset, 180px)); /* 中央基準に右シフト可 */
+    margin-left: calc(50% - 25vw + var(--tokyo-offset, 180px)); /* 中央基準に右シフト可 */
     text-align: left; /* 文字を左寄せ */
     display: flex; /* タイトルとボタンを左右に配置 */
     align-items: center;
@@ -240,7 +278,7 @@
     background-color: #000000;
     color: #ffffff;
     width: 52.5vw;
-    margin-left: calc(50% - 25vw + var(--nakayama-offset, 180px)); /* 中央基準に右シフト可 */
+    margin-left: calc(50% - 25vw + var(--tokyo-offset, 180px)); /* 中央基準に右シフト可 */
     text-align: left; /* 文字を左寄せ */
     display: flex; /* タイトルとボタンを左右に配置 */
     align-items: center;
@@ -282,7 +320,7 @@
     background-color: #000000;
     color: #ffffff;
     width: 52.5vw;
-    margin-left: calc(50% - 25vw + var(--hansin-offset, 180px)); /* 中央基準に右シフト可 */
+    margin-left: calc(50% - 25vw + var(--kyoto-offset, 180px)); /* 中央基準に右シフト可 */
     text-align: left; /* 文字を左寄せ */
     display: flex; /* タイトルとボタンを左右に配置 */
     align-items: center;
@@ -296,7 +334,7 @@
     background-color: #000000;
     color: #ffffff;
     width: 52.5vw;
-    margin-left: calc(50% - 25vw + var(--hansin-offset, 180px)); /* 中央基準に右シフト可 */
+    margin-left: calc(50% - 25vw + var(--kyoto-offset, 180px)); /* 中央基準に右シフト可 */
     text-align: left; /* 文字を左寄せ */
     display: flex; /* タイトルとボタンを左右に配置 */
     align-items: center;
