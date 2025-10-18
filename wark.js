@@ -1,6 +1,6 @@
 // index.html のときのみアラート表示
 if ((location.pathname.split('/').pop() || 'index.html') === 'index.html') {
-    alert("19日 東京\n12R テリオスララ\n新潟\n3R レッドカメリア\n京都\n9R ファニーバニー\n12R キーガッツ");
+    alert("19日 東京\n12R テリオスララ\n京都\n12R キーガッツ\n新潟\n3R レッドカメリア\n9R ファニーバニー、コラルリーフ");
 }
 
 
