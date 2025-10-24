@@ -95,7 +95,8 @@
 }
 
 /* 全ボタン2行目：京都 */
-#kyoto1 .distance-buttons .distance-btn {
+#kyoto1 .distance-buttons .distance-btn,
+#niigata1 .distance-buttons .distance-btn{
     grid-row: 2;
 }
 
@@ -201,6 +202,51 @@
     padding-top: 6px;
     padding-bottom: 6px;
 }
+
+
+/*福島*/
+.hukusimaTop{
+    font-size: 20px;
+    background-color: rgba(0, 150, 205, 0.8);
+}
+
+#hukusima,
+#hukusima1 {
+    background-color: #000000;
+    color: #ffffff;
+    width: 52.5vw;
+    margin-left: calc(50% - 25vw + var(--hukusima-offset, 180px));
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+    padding: 6px 8px;
+}
+
+/* 札幌リンクスタイル */
+.hukusimaTurf a,
+.hukusimaDirt a {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 5px;
+    margin-right: 10px;
+}
+
+.hukusimaTurf a {
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    line-height: 1.8;
+}
+
+.hukusimaDirt a {
+    line-height: 2.2;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
 
 /*新潟*/
 .niigataTop{
@@ -646,8 +692,9 @@ body{
                         color: white;}
 .bottom-nav .nav-sapporo { background-color: #00796b; }
 .bottom-nav .nav-hakodate {background-color: rgba(250, 151, 247, 0.8);}
-.bottom-nav .nav-tokyo{ background-color: #ffd700; }
+.bottom-nav .nav-hukusima {background-color: rgba(0, 150, 205, 0.8);}
 .bottom-nav .nav-nakayama{ background-color: #8e24aa; }
+.bottom-nav .nav-tokyo{ background-color: #ffd700; }
 .bottom-nav .nav-kyoto{ background-color: rgba(36, 170, 63, 0.8); }  
 .bottom-nav .nav-hansin{ background-color: #d4d4d4; }
 

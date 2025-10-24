@@ -1,0 +1,18 @@
+.omikuji {
+    text-align:  center;
+    padding: 20px;
+    border: 5px solid #666;
+}
+
+.omikuji-headline {
+    margin-bottom: 20px;
+}
+
+.omikuji-result {
+    margin-bottom: 20px;
+}
+
+.omikuji-botton {
+    padding: 10px 20px;
+    cursor: pointer;
+}
