@@ -1,6 +1,6 @@
 // index.html のときのみアラート表示
 if ((location.pathname.split('/').pop() || 'index.html') === 'index.html') {
-    alert("1日 東京\n2R シンハ\n4R ギルドホール メリティス\n京都\n9R トッピボーン\n11R ブラックチャリス メイショウハッケイ\n12R エーデルヴェーグ");
+    alert("タイトルの「こう×つくチャンネル」横に掲示板を作ってみました、試してみてください");
 }
 
 
