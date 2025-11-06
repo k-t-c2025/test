@@ -1,15 +1,42 @@
+html {
+    background-color: #e93429;
+}
+
+body {
+    margin: 0;
+    background: white;
+    padding: 20px;
+    max-width:  480px;
+    height: 100vh;
+    display: block;
+    margin: 0 auto;
+}
+
 .omikuji {
     text-align:  center;
     padding: 20px;
-    border: 5px solid #666;
+    border: double 20px #e93429;
+
 }
 
 .omikuji-headline {
     margin-bottom: 20px;
 }
 
+
+@keyframes shake {
+    0% { transform: rotate(0deg);}
+    5% { transform: rotate(10deg);}
+    10% { transform: rotate(-10deg);}
+    15% { transform: rotate(10deg);}
+    20% { transform: rotate(-10deg);}
+    25% { transform: rotate(0deg);}
+    100% { transform: rotate(0deg);}
+}
+
 .omikuji-result {
     margin-bottom: 20px;
+    animation: shake 2.5s 2s ease-in-out 2;
 }
 
 .omikuji-botton {
