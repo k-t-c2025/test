@@ -1,9 +1,7 @@
 // index.html のときのみアラート表示
 if ((location.pathname.split('/').pop() || 'index.html') === 'index.html') {
-    alert("30日 ジャパンC\nダノンデサイル\n京都 2R\n アルヴァンドルード サウンドムーブ\n8R\nコニーアイランド\n12R\nレイピア エーティマクフィ");
+    alert("ステイヤーズS 鳴尾記念");
 }
-    alert("買い目 ジャパンC\n馬単 14-1.2.5.11.16 3連系なら15\n京都 2R 馬単 5-6両面 3単5.6-5.6-1.2.4.7.9.12.12\n8R 馬単 8-3.4.5.9.11\n12R 馬単 6-1.2.10.12.18");
-
 
 
 
@@ -35,4 +33,5 @@ console.log('bottom nav initialized');
     var overlay = 'linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2))';
     document.body.style.backgroundImage = overlay + ', url(' + selected + ')';
 })();
+
 
